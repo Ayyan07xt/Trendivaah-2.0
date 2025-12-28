@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login | Trendivaah</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Login / Signup</h1>
+
+<input type="text" placeholder="Name" id="name">
+<input type="email" placeholder="Email">
+<input type="password" placeholder="Password">
+
+<button onclick="login()">Submit</button>
+
+<script>
+function login() {
+  let name = document.getElementById("name").value;
+  alert("Welcome " + name + "!");
+}
+</script>
+
+</body>
+</html>

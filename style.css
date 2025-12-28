@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  background: #0B0B0B;
+  color: #F5F5F5;
+  font-family: Poppins, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 28px;
+  color: #C9A24D;
+  text-decoration: none;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.hero {
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  display: none;
+}
+
+.hero img.active {
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+}
+
+.products {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: #111;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.product-card img {
+  width: 100%;
+}
+
+.product-detail {
+  display: flex;
+  gap: 30px;
+  padding: 40px;
+}
+
+button {
+  background: #C9A24D;
+  border: none;
+  padding: 12px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.whatsapp, .insta {
+  position: fixed;
+  right: 20px;
+  padding: 12px;
+  color: white;
+}
+
+.whatsapp {
+  bottom: 20px;
+  background: #25D366;
+}
+
+.insta {
+  bottom: 70px;
+  background: #E1306C;
+}
+

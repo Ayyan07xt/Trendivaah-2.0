@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cart | Trendivaah</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Your Cart</h1>
+<p id="cartItem"></p>
+
+<script>
+document.getElementById("cartItem").innerText =
+localStorage.getItem("cart") || "Cart is empty";
+</script>
+
+</body>
+</html>
