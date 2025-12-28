@@ -18,6 +18,9 @@ function payWithGPay() {
   let url = `upi://pay?pa=${upi}&pn=${name}&am=${amount}&cu=INR&tn=${note}`;
   window.location.href = url;
 }
+function payNow() {
+  window.location.href = "upi://pay?pa=7757007795@ybl&pn=Trendivaah&am=999&cu=INR";
+}
 
 // WhatsApp Confirm
 function confirmOrder() {
