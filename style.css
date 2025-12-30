@@ -106,7 +106,26 @@ button {
   padding: 0;
   box-sizing: border-box;
 }
+.float-wa, .float-insta {
+  position: fixed;
+  right: 15px;
+  padding: 10px 14px;
+  border-radius: 5px;
+  font-size: 12px;
+  text-decoration: none;
+  color: #fff;
+  z-index: 999;
+}
 
+.float-wa {
+  bottom: 20px;
+  background: #25D366;
+}
+
+.float-insta {
+  bottom: 60px;
+  background: #E1306C;
+}
 body {
   background: #0b0b0b;
   color: #d4af37;
