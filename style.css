@@ -203,3 +203,32 @@ nav a:hover {
   bottom: 60px;
   background: #E1306C;
 }
+.order-section {
+  padding: 40px;
+  max-width: 500px;
+  margin: 50px auto;
+  background: #111;
+  border-radius: 10px;
+}
+
+.order-section h2 {
+  margin-bottom: 20px;
+}
+
+.order-section input,
+.order-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+.order-section button {
+  width: 100%;
+  padding: 12px;
+  background: #d4af37;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
