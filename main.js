@@ -1,43 +1,23 @@
-// Slider
-let slides = document.querySelectorAll(".slide");
-let index = 0;
-
-setInterval(() => {
-  slides.forEach(s => s.classList.remove("active"));
-  slides[index].classList.add("active");
-  index = (index + 1) % slides.length;
-}, 3000);
-
-// Google Pay
-function payWithGPay() {
-  let upi = "yourupi@bank";
-  let name = "Trendivaah";
-  let amount = 1999;
-  let note = "Order from Trendivaah";
-
-  let url = `upi://pay?pa=${upi}&pn=${name}&am=${amount}&cu=INR&tn=${note}`;
-  window.location.href = url;
-}
-function payNow() {
-  window.location.href = "upi://pay?pa=7757007795@ybl&pn=Trendivaah&am=999&cu=INR";
+function openOrder(product, price) {
+  document.getElementById("orderSection").style.display = "block";
+  document.getElementById("orderProduct").value = product;
+  document.getElementById("orderPrice").value = price;
+  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
 }
 
-// WhatsApp Confirm
-function confirmOrder() {
-  let msg = "Hello Trendivaah, I have completed payment. Please confirm my order.";
-  window.open(`https://wa.me/917757007795?text=${encodeURIComponent(msg)}`);
-}
+document.getElementById("orderForm").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-// Cart
-function addToCart() {
-  localStorage.setItem("cart", "Premium Black Shirt - ₹1999");
-  alert("Added to cart");
-}
-
-// Welcome popup
-window.onload = () => {
-  setTimeout(() => {
-    alert("Welcome to Trendivaah – Luxury Redefined");
-  }, 1200);
-};
-
+  emailjs.sendForm(
+    "service_fmye969",
+    "template_gqozdiy",
+    this
+  ).then(() => {
+    alert("Order placed successfully! We will contact you soon.");
+    this.reset();
+    document.getElementById("orderSection").style.display = "none";
+  }, (error) => {
+    alert("Failed to place order. Please try again.");
+    console.log(error);
+  });
+});
